@@ -22,7 +22,7 @@
 							<!-- Portfolio Modal - Image-->
 							<img 
                                 class="img-fluid rounded mb-5" 
-                                src="/portafolio-mvc/assets/img/portfolio/<?php echo $section['image'];?>" 
+                                src="<?php echo ASSET; ?>/img/portfolio/<?php echo $section['image'];?>" 
                                 alt="<?php echo $section['nameImage'];?>" 
                             />
 							<!-- Portfolio Modal - Text-->

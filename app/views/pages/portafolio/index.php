@@ -37,7 +37,7 @@
 					</div>
 					<img 
 						class="img-fluid" 
-						src="/portafolio-mvc/assets/img/portfolio/<?php echo $item['image'];?>" 
+						src="<?php echo ASSET; ?>/img/portfolio/<?php echo $item['image'];?>" 
 						alt="<?php echo $item['nameImage'];?>" 
 					/>
 				</div>
@@ -181,7 +181,7 @@
 
 <!-- Copyright Section-->
 <div class="copyright py-4 text-center text-white">
-	<div class="container"><small>Copyright &copy; Oscar Castellanos 2024</small></div>
+	<div class="container"><small>Copyright &copy; Oscar Castellanos <?php echo date('Y');?></small></div>
 </div>
 
 <!-- Portfolio Modals-->
