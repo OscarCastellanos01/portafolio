@@ -94,29 +94,33 @@
 		<!-- Contact Section Form-->
 		<div class="row justify-content-center">
 			<div class="col-lg-8 col-xl-7">
-				<form id="contactForm" data-sb-form-api-token="API_TOKEN">
+				<form 
+					id="contactForm" 
+					action="https://formsubmit.co/ocastellanosc@miumg.edu.gt" 
+					method="POST"
+				>
 					<!-- Name input-->
 					<div class="form-floating mb-3">
-						<input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+						<input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required />
 						<label for="name">Nombre completo</label>
 						<div class="invalid-feedback" data-sb-feedback="name:required">El nombre es requerido.</div>
 					</div>
 					<!-- Email address input-->
 					<div class="form-floating mb-3">
-						<input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+						<input class="form-control" id="email" type="email" name="email" placeholder="name@example.com" data-sb-validations="required,email" required/>
 						<label for="email">Correo</label>
 						<div class="invalid-feedback" data-sb-feedback="email:required">El correo es requirido.</div>
 						<div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
 					</div>
 					<!-- Phone number input-->
 					<div class="form-floating mb-3">
-						<input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-						<label for="phone">Número de teléfono</label>
+						<input class="form-control" id="tel" name="tel" placeholder="(502) 456-7890" data-sb-validations="required" required/>
+						<label for="tel">Número de teléfono</label>
 						<div class="invalid-feedback" data-sb-feedback="phone:required">El número de teléfono es requerido.</div>
 					</div>
 					<!-- Message input-->
 					<div class="form-floating mb-3">
-						<textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+						<textarea class="form-control" id="message" name="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required" required></textarea>
 						<label for="message">Mensaje</label>
 						<div class="invalid-feedback" data-sb-feedback="message:required">El mensaje es requerido.</div>
 					</div>
@@ -134,8 +138,17 @@
 					<!-- This is what your users will see when there is-->
 					<!-- an error submitting the form-->
 					<div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error al enviar mensaje!</div></div>
+
+					<!-- formsubmit -->
+						<input type="hidden" name="_template" value="table">
+					<!-- end forsubmit -->
+
 					<!-- Submit Button-->
-					<button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Enviar</button>
+					<button class="btn btn-primary btn-xl" id="submitButton" type="submit">Enviar</button>
+
+					<!-- formsubmit -->
+					<input type="hidden" name="_next" value="http://localhost/portafolio-mvc/portafolio/index#contact">
+					<input type="hidden" name="_captcha" value="false">
 				</form>
 			</div>
 		</div>
